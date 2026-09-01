@@ -162,3 +162,4 @@ footer { padding: 25px 6px 0; color: var(--muted); font-size: 11px; line-height:
   .candidate-card { animation: rise .35s ease both; }
   @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
 }
+
