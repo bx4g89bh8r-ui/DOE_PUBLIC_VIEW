@@ -1,0 +1,236 @@
+{
+  "schema": "DOE_SAFARI_PUBLIC_SNAPSHOT_v1",
+  "meta": {
+    "app_version": "DOE_SAFARI_PUBLIC_VIEW_v1",
+    "generated_at": "2026-09-01T08:00:00+00:00",
+    "data_as_of": "2026-08-28",
+    "next_review_expected": "2026-09-01T10:00:00+00:00",
+    "next_review_note": "BEST_EFFORT; GitHub Actions cron may be delayed or skipped",
+    "update_status": "DELAYED",
+    "update_status_reasons": [
+      "MARKET_DATA_ONE_BUSINESS_SESSION_LATE"
+    ],
+    "engine_version": "B2-PATCH-v0.2.17",
+    "engine_mode": "FROZEN_SELF_TEST_PLUS_MARKET_OVERLAY",
+    "full_b2_dynamic_reevaluation": "DISABLED_ENGINE_DATE_BOUNDARY",
+    "broker_connectivity": "NONE",
+    "market_provider": "FROZEN",
+    "market_provider_errors": {}
+  },
+  "general": {
+    "status": "DELAYED",
+    "valid_green_opportunities": 2,
+    "candidate_count": 5,
+    "mobile_notifications": "NOT_CONFIGURED"
+  },
+  "portfolio_snapshot": {
+    "authority_label": "SNAPSHOT",
+    "access": "READ_ONLY",
+    "visibility": "PUBLIC_ANONYMIZED",
+    "economic_as_of": "2026-08-31T07:58:05.749762+00:00",
+    "economic_age_hours": 24.03173617722222,
+    "positions_disclosed": false,
+    "capital_disclosed": false,
+    "reservations_disclosed": false,
+    "fills_disclosed": false,
+    "economic_authority": "SQLITE_OUTSIDE_PUBLIC_VIEW"
+  },
+  "candidates": [
+    {
+      "ticker": "TROW",
+      "name": "T. Rowe Price",
+      "price": 111.24,
+      "currency": "USD",
+      "data_as_of": "2026-08-28",
+      "price_source": "FROZEN_VALIDATED_SEED",
+      "price_timestamp_timezone": "DATE_ONLY",
+      "previous_signal": "GREEN",
+      "signal": "GREEN",
+      "signal_valid": true,
+      "change_from_previous": null,
+      "price_change_pct": 0.0,
+      "yield_pct": 4.6746,
+      "buy_boundary": 112.0,
+      "margin_of_safety_pct": 0.6785714285714332,
+      "data_confidence": {
+        "base_score": 98,
+        "valid": true,
+        "status": "VALID",
+        "reason": "FROZEN_SCORE_PRESERVED"
+      },
+      "gates": {
+        "data": "PASS",
+        "dividend": "PASS",
+        "fundamental": "PASS",
+        "valuation": "PASS"
+      },
+      "reason": "Datos, dividendo, fundamentales y valoración superan las fronteras públicas.",
+      "valuation_note": "Precio de referencia $111,24 frente a precio máximo canónico $112,00.",
+      "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
+      "purchase_execution": "MANUAL_OUTSIDE_DOE"
+    },
+    {
+      "ticker": "VICI",
+      "name": "VICI Properties",
+      "price": 25.87,
+      "currency": "USD",
+      "data_as_of": "2026-08-28",
+      "price_source": "FROZEN_VALIDATED_SEED",
+      "price_timestamp_timezone": "DATE_ONLY",
+      "previous_signal": "GREEN",
+      "signal": "GREEN",
+      "signal_valid": true,
+      "change_from_previous": null,
+      "price_change_pct": 0.0,
+      "yield_pct": 6.9579,
+      "buy_boundary": 26.0,
+      "margin_of_safety_pct": 0.49999999999999617,
+      "data_confidence": {
+        "base_score": 98,
+        "valid": true,
+        "status": "VALID",
+        "reason": "FROZEN_SCORE_PRESERVED"
+      },
+      "gates": {
+        "data": "PASS",
+        "dividend": "PASS",
+        "fundamental": "PASS",
+        "valuation": "PASS"
+      },
+      "reason": "Datos, dividendo, fundamentales y valoración superan las fronteras públicas.",
+      "valuation_note": "Precio $25,87 frente a frontera BUY $26,00; P/AFFO ~10,5x.",
+      "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
+      "purchase_execution": "MANUAL_OUTSIDE_DOE"
+    },
+    {
+      "ticker": "VZ",
+      "name": "Verizon",
+      "price": 50.1,
+      "currency": "USD",
+      "data_as_of": "2026-08-28",
+      "price_source": "FROZEN_VALIDATED_SEED",
+      "price_timestamp_timezone": "DATE_ONLY",
+      "previous_signal": "YELLOW",
+      "signal": "YELLOW",
+      "signal_valid": true,
+      "change_from_previous": null,
+      "price_change_pct": 0.0,
+      "yield_pct": 5.6487,
+      "buy_boundary": 48.0,
+      "margin_of_safety_pct": -4.3750000000000036,
+      "data_confidence": {
+        "base_score": 98,
+        "valid": true,
+        "status": "VALID",
+        "reason": "FROZEN_SCORE_PRESERVED"
+      },
+      "gates": {
+        "data": "PASS",
+        "dividend": "PASS",
+        "fundamental": "PASS",
+        "valuation": "FAIL"
+      },
+      "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
+      "valuation_note": "Precio $50,10; frontera BUY $48,00.",
+      "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
+      "purchase_execution": "MANUAL_OUTSIDE_DOE"
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "price": 268.04,
+      "currency": "USD",
+      "data_as_of": "2026-08-28",
+      "price_source": "FROZEN_VALIDATED_SEED",
+      "price_timestamp_timezone": "DATE_ONLY",
+      "previous_signal": "YELLOW",
+      "signal": "YELLOW",
+      "signal_valid": true,
+      "change_from_previous": null,
+      "price_change_pct": 0.0,
+      "yield_pct": 1.9997,
+      "buy_boundary": 195.0,
+      "margin_of_safety_pct": -37.456410256410265,
+      "data_confidence": {
+        "base_score": 98,
+        "valid": true,
+        "status": "VALID",
+        "reason": "FROZEN_SCORE_PRESERVED"
+      },
+      "gates": {
+        "data": "PASS",
+        "dividend": "PASS",
+        "fundamental": "PASS",
+        "valuation": "FAIL"
+      },
+      "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
+      "valuation_note": "Precio $268,04; frontera BUY $195,00.",
+      "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
+      "purchase_execution": "MANUAL_OUTSIDE_DOE"
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSMC",
+      "price": 417.52,
+      "currency": "USD",
+      "data_as_of": "2026-08-28",
+      "price_source": "FROZEN_VALIDATED_SEED",
+      "price_timestamp_timezone": "DATE_ONLY",
+      "previous_signal": "YELLOW",
+      "signal": "YELLOW",
+      "signal_valid": true,
+      "change_from_previous": null,
+      "price_change_pct": 0.0,
+      "yield_pct": 0.9744,
+      "buy_boundary": 370.0,
+      "margin_of_safety_pct": -12.843243243243238,
+      "data_confidence": {
+        "base_score": 98,
+        "valid": true,
+        "status": "VALID",
+        "reason": "FROZEN_SCORE_PRESERVED"
+      },
+      "gates": {
+        "data": "PASS",
+        "dividend": "PASS",
+        "fundamental": "PASS",
+        "valuation": "FAIL"
+      },
+      "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
+      "valuation_note": "Precio $417,52; frontera BUY $370,00.",
+      "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
+      "purchase_execution": "MANUAL_OUTSIDE_DOE"
+    }
+  ],
+  "events": [],
+  "alert_rules": {
+    "state_transitions": "ENABLED",
+    "new_priority_opportunity": "FLAG_ON_TRANSITION_TO_GREEN",
+    "previous_green_lost": "FLAG_ON_TRANSITION_FROM_GREEN",
+    "data_confidence_invalidation": "ENABLED",
+    "material_valuation_change": "NOT_DEFINED_IN_FROZEN_RULES",
+    "duplicate_suppression": "SHA256_EVENT_ID_PLUS_LAST_PUBLISHED_STATE"
+  },
+  "notification_adapter": {
+    "status": "NOT_CONFIGURED",
+    "mobile_push_verified": false
+  },
+  "permissions": {
+    "manual_fill": false,
+    "user_confirmed_fill": false,
+    "portfolio_write": false,
+    "capital_write": false,
+    "reservation_write": false,
+    "sqlite_write": false,
+    "broker_orders": false,
+    "broker_credentials": false
+  },
+  "integrity": {
+    "candidate_state_sha256": "f40f0cb8040678028960a151ac4bbeced084c7be8a0154344f84f81ea008a41c",
+    "contains_economic_authority": false,
+    "contains_portfolio_values": false,
+    "contains_capital_values": false,
+    "contains_reservations": false,
+    "contains_fills": false
+  }
+}
