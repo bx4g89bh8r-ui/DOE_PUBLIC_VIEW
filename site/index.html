@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f4f1e9">
-  <meta name="description" content="Proyección pública anonimizada de Dividend Opportunity Engine. Solo lectura.">
+  <meta name="description" content="Consulta económica de Dividend Opportunity Engine. Snapshot de solo lectura.">
   <title>Dividend Opportunity Engine · Consulta</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -21,8 +21,8 @@
     <section class="readonly" aria-label="Frontera económica">
       <div class="lock" aria-hidden="true">RO</div>
       <div>
-        <strong>PORTFOLIO · SNAPSHOT · READ ONLY · ANONYMIZED</strong>
-        <p>La cartera, el capital y las operaciones personales no se publican. Compra manual requerida fuera de DOE.</p>
+        <strong>PORTFOLIO · SNAPSHOT · READ ONLY</strong>
+        <p>Consulta únicamente. Compra manual requerida fuera de DOE.</p>
       </div>
     </section>
 
@@ -54,15 +54,16 @@
       <div class="section-head compact">
         <div>
           <p class="eyebrow">Cartera</p>
-          <h2>Frontera económica privada</h2>
+          <h2>Último estado autoritativo disponible</h2>
         </div>
         <span class="snapshot-pill">SNAPSHOT</span>
       </div>
       <div class="portfolio-totals">
-        <div><span>Posiciones y valoración</span><strong id="portfolio-visibility">—</strong></div>
-        <div><span>Capital y reservas</span><strong id="capital-visibility">—</strong></div>
-        <div><span>Autoridad económica</span><strong id="economic-authority">—</strong></div>
+        <div><span>Valor estimado</span><strong id="portfolio-value">—</strong></div>
+        <div><span>Posiciones</span><strong id="positions-count">—</strong></div>
+        <div><span>Capital desplegable</span><strong id="deployable-capital">—</strong></div>
       </div>
+      <div id="positions" class="positions"></div>
     </section>
 
     <footer>
@@ -73,3 +74,4 @@
   <script src="./app.js" defer></script>
 </body>
 </html>
+

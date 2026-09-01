@@ -1,54 +1,42 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/doe/public-snapshot-v1.schema.json",
-  "title": "DOE Safari Public Anonymized Snapshot v1",
+  "$id": "https://example.invalid/doe/public-sanitized-snapshot-v1.schema.json",
+  "title": "DOE public allowlisted snapshot v1",
   "type": "object",
-  "required": ["schema", "meta", "general", "portfolio_snapshot", "candidates", "events", "alert_rules", "notification_adapter", "permissions", "integrity"],
+  "additionalProperties": false,
+  "required": ["schema", "meta", "general", "portfolio_snapshot", "candidates", "events", "alert_rules", "notification_adapter"],
   "properties": {
     "schema": {"const": "DOE_SAFARI_PUBLIC_SNAPSHOT_v1"},
     "meta": {
       "type": "object",
-      "required": ["generated_at", "data_as_of", "next_review_expected", "update_status", "engine_version", "broker_connectivity"],
+      "required": ["generated_at", "data_as_of", "next_review_expected", "update_status", "engine_version", "broker_connectivity", "sanitizer_version"],
       "properties": {
         "generated_at": {"type": "string", "format": "date-time"},
         "data_as_of": {"type": ["string", "null"]},
         "next_review_expected": {"type": "string", "format": "date-time"},
         "update_status": {"enum": ["CURRENT", "DELAYED", "STALE", "UNAVAILABLE"]},
         "engine_version": {"const": "B2-PATCH-v0.2.17"},
-        "broker_connectivity": {"const": "NONE"}
+        "broker_connectivity": {"const": "NONE"},
+        "sanitizer_version": {"const": "DOE_PUBLIC_SANITIZER_v1"}
       }
     },
     "portfolio_snapshot": {
       "type": "object",
-      "required": ["authority_label", "access", "visibility", "economic_as_of", "economic_age_hours", "positions_disclosed", "capital_disclosed", "reservations_disclosed", "fills_disclosed", "economic_authority"],
+      "additionalProperties": false,
+      "required": ["authority_label", "access", "visibility", "economic_as_of", "economic_age_hours", "economic_authority"],
       "properties": {
         "authority_label": {"const": "SNAPSHOT"},
         "access": {"const": "READ_ONLY"},
         "visibility": {"const": "PUBLIC_ANONYMIZED"},
-        "positions_disclosed": {"const": false},
-        "capital_disclosed": {"const": false},
-        "reservations_disclosed": {"const": false},
-        "fills_disclosed": {"const": false},
+        "economic_as_of": {"type": "string"},
+        "economic_age_hours": {"type": "number"},
         "economic_authority": {"const": "SQLITE_OUTSIDE_PUBLIC_VIEW"}
-      },
-      "additionalProperties": false
+      }
     },
+    "general": {"type": "object"},
     "candidates": {"type": "array"},
     "events": {"type": "array"},
-    "permissions": {
-      "type": "object",
-      "additionalProperties": {"const": false}
-    },
-    "integrity": {
-      "type": "object",
-      "required": ["contains_economic_authority"],
-      "properties": {
-        "contains_economic_authority": {"const": false},
-        "contains_portfolio_values": {"const": false},
-        "contains_capital_values": {"const": false},
-        "contains_reservations": {"const": false},
-        "contains_fills": {"const": false}
-      }
-    }
+    "alert_rules": {"type": "object"},
+    "notification_adapter": {"type": "object"}
   }
 }

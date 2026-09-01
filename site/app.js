@@ -1,7 +1,7 @@
 "use strict";
 
+const money = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
 const usd = new Intl.NumberFormat("es-ES", { style: "currency", currency: "USD", minimumFractionDigits: 2 });
-const eur = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", minimumFractionDigits: 2 });
 const pct = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1, signDisplay: "exceptZero" });
 const localTime = new Intl.DateTimeFormat("es-ES", {
   timeZone: "Europe/Madrid", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit"
@@ -34,7 +34,7 @@ function renderCandidate(item, index) {
       <span class="signal signal-${signalClass}">${item.signal}${item.signal_valid ? "" : " · NO VÁLIDA"}</span>
     </div>
     <div class="price-row">
-      <div class="price">${item.currency === "USD" ? usd.format(item.price) : eur.format(item.price)}</div>
+      <div class="price">${item.currency === "USD" ? usd.format(item.price) : money.format(item.price)}</div>
       <div class="delta">${change}</div>
     </div>
     <div class="metrics">
@@ -64,9 +64,18 @@ function render(snapshot) {
   const list = document.getElementById("candidate-list");
   list.replaceChildren(...snapshot.candidates.map(renderCandidate));
 
-  text("portfolio-visibility", "NO PUBLICADA");
-  text("capital-visibility", "NO PUBLICADO");
-  text("economic-authority", "SQLITE PRIVADA");
+  const portfolio = snapshot.portfolio_snapshot;
+  text("portfolio-value", money.format(portfolio.invested_value_eur));
+  text("positions-count", String(portfolio.positions_count));
+  text("deployable-capital", money.format(portfolio.capital.deployable_eur));
+  const positions = document.getElementById("positions");
+  const rows = portfolio.positions.map(item => {
+    const row = document.createElement("div");
+    row.className = "position";
+    row.innerHTML = `<strong>${item.ticker}</strong><span>${nullablePct(item.weight * 100)}</span><span>${money.format(item.value_eur)}</span>`;
+    return row;
+  });
+  positions.replaceChildren(...rows);
   text("refresh-note", snapshot.meta.next_review_note);
 }
 
@@ -85,3 +94,4 @@ fetch("./data/snapshot.json", { cache: "no-store" })
   })
   .then(render)
   .catch(renderError);
+
