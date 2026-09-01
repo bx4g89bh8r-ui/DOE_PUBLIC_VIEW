@@ -48,6 +48,35 @@ function renderCandidate(item, index) {
   return article;
 }
 
+function renderScannerDiscovery(item, index) {
+  const article = document.createElement("article");
+  article.className = "candidate-card scanner-card";
+  article.style.animationDelay = `${Math.min(index * 35, 180)}ms`;
+  article.innerHTML = `
+    <div class="candidate-top">
+      <div><div class="ticker">${item.ticker}</div><div class="company">${item.name}</div></div>
+      <span class="signal scanner-review">${item.user_label === "REVISAR" ? "🟡 REVISAR" : item.user_label}</span>
+    </div>
+    <div class="metrics scanner-metrics">
+      <div class="metric"><span>Prioridad de investigación</span><strong>${item.research_priority_score ?? "—"}</strong></div>
+      <div class="metric"><span>Data Confidence</span><strong>${item.data_confidence ?? "—"}</strong></div>
+      <div class="metric"><span>Drawdown</span><strong>${nullablePct(item.drawdown)}</strong></div>
+    </div>
+    <p class="reason">${(item.public_trigger_codes || []).join(" · ") || "Sin trigger público disponible"}</p>
+  `;
+  return article;
+}
+
+function renderScanner(scanner) {
+  const safe = scanner || { scanner_summary: {}, discoveries: [], notification_adapter: { status: "NOT_CONFIGURED" } };
+  const summary = safe.scanner_summary || {};
+  text("scanner-watch-count", String(summary.watch_count ?? 0));
+  text("scanner-summary", `Universo ${summary.universe_count ?? 200} · WATCH ${summary.watch_count ?? 0} · Investigación ${summary.research_queue_count ?? 0} · Lista para evaluación ${summary.ready_for_evaluation_count ?? 0} · Push ${safe.notification_adapter?.status || "NOT_CONFIGURED"}`);
+  const list = document.getElementById("scanner-list");
+  const items = safe.discoveries || [];
+  list.replaceChildren(...(items.length ? items.map(renderScannerDiscovery) : [Object.assign(document.createElement("article"), { className: "loading-card", textContent: "Sin descubrimientos Scanner publicables en este ciclo." })]));
+}
+
 function render(snapshot) {
   const status = snapshot.meta.update_status;
   const statusNode = document.getElementById("general-status");
@@ -63,6 +92,7 @@ function render(snapshot) {
   text("candidate-count", String(snapshot.candidates.length));
   const list = document.getElementById("candidate-list");
   list.replaceChildren(...snapshot.candidates.map(renderCandidate));
+  renderScanner(snapshot.scanner);
 
   text("portfolio-visibility", "NO PUBLICADA");
   text("capital-visibility", "NO PUBLICADO");
@@ -76,6 +106,7 @@ function renderError() {
   statusNode.className = "status status-unavailable";
   const list = document.getElementById("candidate-list");
   list.innerHTML = '<article class="loading-card">Snapshot no disponible. No se muestra ninguna señal como actual.</article>';
+  renderScanner(null);
 }
 
 fetch("./data/snapshot.json", { cache: "no-store" })

@@ -123,6 +123,13 @@ h2 { font-size: 21px; letter-spacing: -.025em; }
 
 .candidate-list { display: grid; gap: 10px; }
 
+.scanner-panel { margin-top: 32px; padding: 17px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255, 253, 248, .75); }
+.scanner-boundary { margin: -3px 0 13px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.scanner-summary { margin-bottom: 12px; padding: 10px 12px; border-radius: 13px; background: #f1efe8; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.scanner-card { border-color: rgba(180, 117, 14, .32); }
+.scanner-review { color: var(--yellow); background: var(--yellow-soft); }
+.scanner-metrics { margin-top: 16px; }
+
 .candidate-card { padding: 16px; border-radius: 20px; box-shadow: 0 10px 35px rgba(39, 48, 44, .05); }
 .candidate-card.invalid { opacity: .75; }
 .candidate-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
@@ -162,4 +169,3 @@ footer { padding: 25px 6px 0; color: var(--muted); font-size: 11px; line-height:
   .candidate-card { animation: rise .35s ease both; }
   @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
 }
-
