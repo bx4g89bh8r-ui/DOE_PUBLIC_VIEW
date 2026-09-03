@@ -2,13 +2,13 @@
   "schema": "DOE_SAFARI_PUBLIC_SNAPSHOT_v1",
   "meta": {
     "app_version": "DOE_SAFARI_STATIC_VIEW_v1",
-    "generated_at": "2026-09-03T04:36:17.705152+00:00",
+    "generated_at": "2026-09-03T11:13:03.913730+00:00",
     "data_as_of": "2026-09-02",
-    "next_review_expected": "2026-09-03T06:36:17.705152+00:00",
+    "next_review_expected": "2026-09-03T13:13:03.913730+00:00",
     "next_review_note": "BEST_EFFORT; GitHub Actions cron may be delayed or skipped",
-    "update_status": "CURRENT",
+    "update_status": "DELAYED",
     "update_status_reasons": [
-      "ALL_CHECKS_CURRENT"
+      "ECONOMIC_SNAPSHOT_OLDER_THAN_3D"
     ],
     "engine_version": "B2-PATCH-v0.2.17",
     "engine_mode": "FROZEN_SELF_TEST_PLUS_MARKET_OVERLAY",
@@ -18,7 +18,7 @@
     "sanitizer_version": "DOE_PUBLIC_SANITIZER_v1"
   },
   "general": {
-    "status": "CURRENT",
+    "status": "DELAYED",
     "valid_green_opportunities": 2,
     "candidate_count": 5,
     "mobile_notifications": "NOT_CONFIGURED"
@@ -27,7 +27,7 @@
     "authority_label": "SNAPSHOT",
     "access": "READ_ONLY",
     "economic_as_of": "2026-08-31T07:58:05.749762+00:00",
-    "economic_age_hours": 68.636654275,
+    "economic_age_hours": 75.2494899911111,
     "economic_authority": "SQLITE_OUTSIDE_PUBLIC_VIEW",
     "visibility": "PUBLIC_ANONYMIZED"
   },
