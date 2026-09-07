@@ -2,13 +2,13 @@
   "schema": "DOE_SAFARI_PUBLIC_SNAPSHOT_v1",
   "meta": {
     "app_version": "DOE_SAFARI_STATIC_VIEW_v1",
-    "generated_at": "2026-09-07T07:42:50.204399+00:00",
+    "generated_at": "2026-09-07T12:30:57.995929+00:00",
     "data_as_of": "2026-09-04",
-    "next_review_expected": "2026-09-07T09:42:50.204399+00:00",
+    "next_review_expected": "2026-09-07T14:30:57.995929+00:00",
     "next_review_note": "BEST_EFFORT; GitHub Actions cron may be delayed or skipped",
-    "update_status": "DELAYED",
+    "update_status": "STALE",
     "update_status_reasons": [
-      "ECONOMIC_SNAPSHOT_OLDER_THAN_3D"
+      "ECONOMIC_SNAPSHOT_OLDER_THAN_7D"
     ],
     "engine_version": "B2-PATCH-v0.2.17",
     "engine_mode": "FROZEN_SELF_TEST_PLUS_MARKET_OVERLAY",
@@ -18,8 +18,8 @@
     "sanitizer_version": "DOE_PUBLIC_SANITIZER_v1"
   },
   "general": {
-    "status": "DELAYED",
-    "valid_green_opportunities": 2,
+    "status": "STALE",
+    "valid_green_opportunities": 0,
     "candidate_count": 5,
     "mobile_notifications": "NOT_CONFIGURED"
   },
@@ -27,7 +27,7 @@
     "authority_label": "SNAPSHOT",
     "access": "READ_ONLY",
     "economic_as_of": "2026-08-31T07:58:05.749762+00:00",
-    "economic_age_hours": 167.7456818436111,
+    "economic_age_hours": 172.5478461575,
     "economic_authority": "SQLITE_OUTSIDE_PUBLIC_VIEW",
     "visibility": "PUBLIC_ANONYMIZED"
   },
@@ -42,7 +42,7 @@
       "price_timestamp_timezone": "UTC",
       "previous_signal": null,
       "signal": "GREEN",
-      "signal_valid": true,
+      "signal_valid": false,
       "change_from_previous": null,
       "price_change_pct": 0.0,
       "yield_pct": 4.736769028967024,
@@ -50,9 +50,9 @@
       "margin_of_safety_pct": 1.9821428571428563,
       "data_confidence": {
         "base_score": 98,
-        "valid": true,
-        "status": "VALID",
-        "reason": "FROZEN_SCORE_PRESERVED"
+        "valid": false,
+        "status": "INVALIDATED",
+        "reason": "FRESHNESS_OR_PROVIDER_FAILURE"
       },
       "gates": {
         "data": "PASS",
@@ -60,7 +60,7 @@
         "fundamental": "PASS",
         "valuation": "PASS"
       },
-      "reason": "Datos, dividendo, fundamentales y valoración superan las fronteras públicas.",
+      "reason": "Señal no utilizable por frescura insuficiente o fallo del proveedor de mercado.",
       "valuation_note": "Precio de referencia $111,24 frente a precio máximo canónico $112,00.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
@@ -75,7 +75,7 @@
       "price_timestamp_timezone": "UTC",
       "previous_signal": null,
       "signal": "GREEN",
-      "signal_valid": true,
+      "signal_valid": false,
       "change_from_previous": null,
       "price_change_pct": 0.0,
       "yield_pct": 7.081072895357986,
@@ -83,9 +83,9 @@
       "margin_of_safety_pct": 2.230769230769224,
       "data_confidence": {
         "base_score": 98,
-        "valid": true,
-        "status": "VALID",
-        "reason": "FROZEN_SCORE_PRESERVED"
+        "valid": false,
+        "status": "INVALIDATED",
+        "reason": "FRESHNESS_OR_PROVIDER_FAILURE"
       },
       "gates": {
         "data": "PASS",
@@ -93,7 +93,7 @@
         "fundamental": "PASS",
         "valuation": "PASS"
       },
-      "reason": "Datos, dividendo, fundamentales y valoración superan las fronteras públicas.",
+      "reason": "Señal no utilizable por frescura insuficiente o fallo del proveedor de mercado.",
       "valuation_note": "Precio $25,87 frente a frontera BUY $26,00; P/AFFO ~10,5x.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
@@ -108,7 +108,7 @@
       "price_timestamp_timezone": "UTC",
       "previous_signal": null,
       "signal": "YELLOW",
-      "signal_valid": true,
+      "signal_valid": false,
       "change_from_previous": null,
       "price_change_pct": 0.0,
       "yield_pct": 5.644193657758277,
@@ -116,9 +116,9 @@
       "margin_of_safety_pct": -4.458333333333334,
       "data_confidence": {
         "base_score": 98,
-        "valid": true,
-        "status": "VALID",
-        "reason": "FROZEN_SCORE_PRESERVED"
+        "valid": false,
+        "status": "INVALIDATED",
+        "reason": "FRESHNESS_OR_PROVIDER_FAILURE"
       },
       "gates": {
         "data": "PASS",
@@ -126,7 +126,7 @@
         "fundamental": "PASS",
         "valuation": "FAIL"
       },
-      "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
+      "reason": "Señal no utilizable por frescura insuficiente o fallo del proveedor de mercado.",
       "valuation_note": "Precio $50,10; frontera BUY $48,00.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
@@ -141,7 +141,7 @@
       "price_timestamp_timezone": "UTC",
       "previous_signal": null,
       "signal": "YELLOW",
-      "signal_valid": true,
+      "signal_valid": false,
       "change_from_previous": null,
       "price_change_pct": 0.0,
       "yield_pct": 1.94746062565854,
@@ -149,9 +149,9 @@
       "margin_of_safety_pct": -41.14358974358975,
       "data_confidence": {
         "base_score": 98,
-        "valid": true,
-        "status": "VALID",
-        "reason": "FROZEN_SCORE_PRESERVED"
+        "valid": false,
+        "status": "INVALIDATED",
+        "reason": "FRESHNESS_OR_PROVIDER_FAILURE"
       },
       "gates": {
         "data": "PASS",
@@ -159,7 +159,7 @@
         "fundamental": "PASS",
         "valuation": "FAIL"
       },
-      "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
+      "reason": "Señal no utilizable por frescura insuficiente o fallo del proveedor de mercado.",
       "valuation_note": "Precio $268,04; frontera BUY $195,00.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
@@ -174,7 +174,7 @@
       "price_timestamp_timezone": "UTC",
       "previous_signal": null,
       "signal": "YELLOW",
-      "signal_valid": true,
+      "signal_valid": false,
       "change_from_previous": null,
       "price_change_pct": 0.0,
       "yield_pct": 0.9485241379310344,
@@ -182,9 +182,9 @@
       "margin_of_safety_pct": -15.921621621621629,
       "data_confidence": {
         "base_score": 98,
-        "valid": true,
-        "status": "VALID",
-        "reason": "FROZEN_SCORE_PRESERVED"
+        "valid": false,
+        "status": "INVALIDATED",
+        "reason": "FRESHNESS_OR_PROVIDER_FAILURE"
       },
       "gates": {
         "data": "PASS",
@@ -192,7 +192,7 @@
         "fundamental": "PASS",
         "valuation": "FAIL"
       },
-      "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
+      "reason": "Señal no utilizable por frescura insuficiente o fallo del proveedor de mercado.",
       "valuation_note": "Precio $417,52; frontera BUY $370,00.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
