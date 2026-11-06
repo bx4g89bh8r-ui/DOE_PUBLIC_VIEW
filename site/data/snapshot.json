@@ -2,9 +2,9 @@
   "schema": "DOE_SAFARI_PUBLIC_SNAPSHOT_v1",
   "meta": {
     "app_version": "DOE_SAFARI_STATIC_VIEW_v1",
-    "generated_at": "2026-11-06T18:29:52.911328+00:00",
+    "generated_at": "2026-11-06T18:37:48.333328+00:00",
     "data_as_of": "2026-11-06",
-    "next_review_expected": "2026-11-06T20:29:52.911328+00:00",
+    "next_review_expected": "2026-11-06T20:37:48.333328+00:00",
     "next_review_note": "BEST_EFFORT; GitHub Actions cron may be delayed or skipped",
     "update_status": "CURRENT",
     "update_status_reasons": [
@@ -26,8 +26,8 @@
   "portfolio_snapshot": {
     "authority_label": "SNAPSHOT",
     "access": "READ_ONLY",
-    "economic_as_of": "2026-11-06T18:29:52.792083+00:00",
-    "economic_age_hours": 3.312361111111111e-05,
+    "economic_as_of": "2026-11-06T18:37:48.200472+00:00",
+    "economic_age_hours": 3.690444444444445e-05,
     "economic_authority": "SQLITE_OUTSIDE_PUBLIC_VIEW",
     "visibility": "PUBLIC_ANONYMIZED"
   },
@@ -35,7 +35,7 @@
     {
       "ticker": "TROW",
       "name": "T. Rowe Price",
-      "price": 108.315,
+      "price": 108.455,
       "currency": "USD",
       "data_as_of": "2026-11-06",
       "price_source": "FROZEN_VALIDATED_SEED",
@@ -44,10 +44,10 @@
       "signal": "GREEN",
       "signal_valid": true,
       "change_from_previous": null,
-      "price_change_pct": 0.09703354588300894,
-      "yield_pct": 4.800812445183031,
+      "price_change_pct": 0.1292526427549283,
+      "yield_pct": 4.794615278225993,
       "buy_boundary": 112.0,
-      "margin_of_safety_pct": 3.290178571428574,
+      "margin_of_safety_pct": 3.165178571428573,
       "data_confidence": {
         "base_score": 98,
         "valid": true,
@@ -61,7 +61,7 @@
         "valuation": "PASS"
       },
       "reason": "Datos, dividendo, fundamentales y valoración superan las fronteras públicas.",
-      "valuation_note": "Precio actual $108.31; frontera BUY $112.00; Valuation Gate PASS.",
+      "valuation_note": "Precio actual $108.45; frontera BUY $112.00; Valuation Gate PASS.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
     },
@@ -77,7 +77,7 @@
       "signal": "GREEN",
       "signal_valid": true,
       "change_from_previous": null,
-      "price_change_pct": -0.02009242515572657,
+      "price_change_pct": 0.0,
       "yield_pct": 7.395498392282959,
       "buy_boundary": 26.0,
       "margin_of_safety_pct": 4.307692307692312,
@@ -101,7 +101,7 @@
     {
       "ticker": "VZ",
       "name": "Verizon",
-      "price": 45.862,
+      "price": 45.915,
       "currency": "USD",
       "data_as_of": "2026-11-06",
       "price_source": "FROZEN_VALIDATED_SEED",
@@ -110,10 +110,10 @@
       "signal": "GREEN",
       "signal_valid": true,
       "change_from_previous": null,
-      "price_change_pct": -0.006540935353755834,
-      "yield_pct": 6.170685970956347,
+      "price_change_pct": 0.11556408355500691,
+      "yield_pct": 6.163563105738866,
       "buy_boundary": 48.0,
-      "margin_of_safety_pct": 4.454166666666662,
+      "margin_of_safety_pct": 4.343750000000002,
       "data_confidence": {
         "base_score": 98,
         "valid": true,
@@ -127,14 +127,14 @@
         "valuation": "PASS"
       },
       "reason": "Datos, dividendo, fundamentales y valoración superan las fronteras públicas.",
-      "valuation_note": "Precio actual $45.86; frontera BUY $48.00; Valuation Gate PASS.",
+      "valuation_note": "Precio actual $45.91; frontera BUY $48.00; Valuation Gate PASS.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
     },
     {
       "ticker": "JNJ",
       "name": "Johnson & Johnson",
-      "price": 275.29,
+      "price": 275.065,
       "currency": "USD",
       "data_as_of": "2026-11-06",
       "price_source": "FROZEN_VALIDATED_SEED",
@@ -143,10 +143,10 @@
       "signal": "YELLOW",
       "signal_valid": true,
       "change_from_previous": null,
-      "price_change_pct": 0.04906325525614573,
-      "yield_pct": 1.9470376693668494,
+      "price_change_pct": -0.08173199171783309,
+      "yield_pct": 1.9486303237416611,
       "buy_boundary": 195.0,
-      "margin_of_safety_pct": -41.17435897435898,
+      "margin_of_safety_pct": -41.05897435897436,
       "data_confidence": {
         "base_score": 98,
         "valid": true,
@@ -160,14 +160,14 @@
         "valuation": "FAIL"
       },
       "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
-      "valuation_note": "Precio actual $275.29; frontera BUY $195.00; Valuation Gate FAIL.",
+      "valuation_note": "Precio actual $275.06; frontera BUY $195.00; Valuation Gate FAIL.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
     },
     {
       "ticker": "TSM",
       "name": "TSMC",
-      "price": 373.04,
+      "price": 373.55,
       "currency": "USD",
       "data_as_of": "2026-11-06",
       "price_source": "FROZEN_VALIDATED_SEED",
@@ -176,10 +176,10 @@
       "signal": "YELLOW",
       "signal_valid": true,
       "change_from_previous": null,
-      "price_change_pct": 0.20145585430712618,
-      "yield_pct": 1.1801726356422904,
+      "price_change_pct": 0.13671456144112987,
+      "yield_pct": 1.1785613706331148,
       "buy_boundary": 370.0,
-      "margin_of_safety_pct": -0.8216216216216271,
+      "margin_of_safety_pct": -0.9594594594594625,
       "data_confidence": {
         "base_score": 98,
         "valid": true,
@@ -193,7 +193,7 @@
         "valuation": "FAIL"
       },
       "reason": "Datos, dividendo y fundamentales superan los gates; valoración fuera de la frontera BUY.",
-      "valuation_note": "Precio actual $373.04; frontera BUY $370.00; Valuation Gate FAIL.",
+      "valuation_note": "Precio actual $373.55; frontera BUY $370.00; Valuation Gate FAIL.",
       "evaluation_scope": "PUBLIC_MARKET_OVERLAY_WITHOUT_PORTFOLIO_GATE",
       "purchase_execution": "MANUAL_OUTSIDE_DOE"
     }
