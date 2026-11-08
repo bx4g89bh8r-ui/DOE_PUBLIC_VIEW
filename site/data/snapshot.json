@@ -2,9 +2,9 @@
   "schema": "DOE_SAFARI_PUBLIC_SNAPSHOT_v1",
   "meta": {
     "app_version": "DOE_SAFARI_STATIC_VIEW_v1",
-    "generated_at": "2026-11-08T08:58:30.250430+00:00",
+    "generated_at": "2026-11-08T10:14:39.638929+00:00",
     "data_as_of": "2026-11-06",
-    "next_review_expected": "2026-11-08T10:58:30.250430+00:00",
+    "next_review_expected": "2026-11-08T12:14:39.638929+00:00",
     "next_review_note": "BEST_EFFORT; GitHub Actions cron may be delayed or skipped",
     "update_status": "CURRENT",
     "update_status_reasons": [
@@ -26,8 +26,8 @@
   "portfolio_snapshot": {
     "authority_label": "SNAPSHOT",
     "access": "READ_ONLY",
-    "economic_as_of": "2026-11-08T08:58:30.173059+00:00",
-    "economic_age_hours": 2.1491944444444442e-05,
+    "economic_as_of": "2026-11-08T10:14:28.391949+00:00",
+    "economic_age_hours": 0.0031241611111111115,
     "economic_authority": "SQLITE_OUTSIDE_PUBLIC_VIEW",
     "visibility": "PUBLIC_ANONYMIZED"
   },
