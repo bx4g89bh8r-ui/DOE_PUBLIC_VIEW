@@ -213,7 +213,7 @@
   },
   "scanner": {
     "schema": "DOE_SCANNER_PUBLIC_DISCOVERIES_v1",
-    "generated_at": "2026-11-23T13:36:00.197134+00:00",
+    "generated_at": "2026-11-24T14:13:36.501072+00:00",
     "scanner_summary": {
       "universe_count": 200,
       "watch_count": 0,
